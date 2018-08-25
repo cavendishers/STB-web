@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/foundation/5.5.3/css/foundation.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/foundation/5.5.3/js/foundation.min.js"></script>
+    <script src="https://cdn.bootcss.com/foundation/5.5.3/js/vendor/modernizr.js"></script>
+    <title>hsy量词破碎机</title>
+</head>
+<body>
+<form action="{% url 'web:re'%}" method="post" >
+    {% csrf_token %}
+    <input type="text" placeholder="waht is hte word"  name="word" value="{{ word }}">
+    <button type="submit" id="go">破碎！</button>
+    <p>word：{{ word }}</p>
+    <p>hsy觉得这个应该这么说：<span id="test">{{ reword }}</span></p>
+</form>
+</body>
+</html>

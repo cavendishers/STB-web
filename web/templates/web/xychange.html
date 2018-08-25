@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/foundation/5.5.3/css/foundation.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/foundation/5.5.3/js/foundation.min.js"></script>
+    <script src="https://cdn.bootcss.com/foundation/5.5.3/js/vendor/modernizr.js"></script>
+    <title>STB->XY交换机</title>
+
+</head>
+<body>
+<h1>welcome to changement</h1>
+
+<form action="{% url 'web:finish' %}" method="post">
+    {% csrf_token %}
+    <input type="text" placeholder="祭品名字">
+    <input type="radio" name="type" value="潘洛斯">潘洛斯
+    <input type="radio" name="type" value="悖论">悖论
+
+<br>
+    <button>开始交换</button>
+<p>你得到了：{{ rand}}</p>
+    <a href="/logout" class="button round">注销</a>
+</br>
+    <p>()</p>
+    <a href="" class="button">random</a>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/foundation/5.5.3/css/foundation.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/foundation/5.5.3/js/foundation.min.js"></script>
+    <script src="https://cdn.bootcss.com/foundation/5.5.3/js/vendor/modernizr.js"></script>
+    <title>伟大的xy陛下在召唤你</title>
+</head>
+<body>
+<form action={%url 'web:login'%} method="post">
+    {% csrf_token %}
+<div class="row1" align="center">
+    <h2>xy通行证</h2>
+    <div class="small-5">
+        <input type="text" placeholder="陛下赐予你的名字" name="username">
+    </div>
+</div>
+<div class="row1" align="center">
+    <h2>xy密令</h2>
+    <div class="small-5">
+        <input type="text" placeholder="陛下准许你的密码" name="password" >
+    </div>
+</div>
+<div align="center">
+    <button type="submit" class="button round button secondary">模因认证</button>
+</div>
+
+</form>
+</body>
+</html>
